@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate Food | FoodBridge</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="index.html">🍃 FoodBridge</a>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="listings.html">Find Food</a>
+  </div>
+</nav>
+
+<main class="form-page">
+  <div class="card form-card">
+    <span class="pill">Make an Impact</span>
+    <h1>List Surplus Food</h1>
+    <p>Share details so a rescuer can collect it.</p>
+
+    <form id="donateForm" class="form-grid">
+      <label>Food Name
+        <input id="food_name" required placeholder="e.g. Rice & Curry">
+      </label>
+
+      <label>Category
+        <select id="category">
+          <option>Cooked Food</option>
+          <option>Bakery</option>
+          <option>Fruits & Vegetables</option>
+          <option>Packaged Food</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>Quantity
+        <input id="quantity" required placeholder="e.g. 20">
+      </label>
+
+      <label>Pickup Location
+        <input id="location" required placeholder="e.g. Gandhipuram">
+      </label>
+
+      <label>Expiry Date & Time
+        <input id="expiry" type="datetime-local" required>
+      </label>
+
+      <label>Description
+        <textarea id="description" rows="4"
+          placeholder="Add useful pickup information"></textarea>
+      </label>
+
+      <div>
+        <button class="btn">Publish Donation</button>
+      </div>
+
+      <div id="message" class="message"></div>
+    </form>
+  </div>
+</main>
+
+<script src="js/donate.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | FoodBridge</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-page">
+  <div class="auth-box">
+    <a class="brand" href="index.html">🍃 FoodBridge</a>
+
+    <h1>Welcome back</h1>
+    <p>Login to continue rescuing food.</p>
+
+    <form id="loginForm">
+      <label>Email
+        <input type="email" id="email" required>
+      </label>
+
+      <label>Password
+        <input type="password" id="password" required>
+      </label>
+
+      <button class="btn full">Login</button>
+
+      <div id="message" class="message"></div>
+    </form>
+
+    <p>New to FoodBridge?
+      <a href="register.html">Create an account</a>
+    </p>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | FoodBridge</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="index.html">🍃 FoodBridge</a>
+  <div class="nav-links">
+    <a href="listings.html">Find Food</a>
+    <a href="profile.html">Profile</a>
+    <button class="link-btn" onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<main class="section">
+  <div class="page-head">
+    <div>
+      <span class="pill">Dashboard</span>
+      <h1 id="welcome">Welcome!</h1>
+      <p>Track your food rescue activity.</p>
+    </div>
+    <a class="btn" href="donate.html">+ Donate Food</a>
+  </div>
+
+  <div class="stats">
+    <div><strong id="total">0</strong><span>Total Donations</span></div>
+    <div><strong id="available">0</strong><span>Available</span></div>
+    <div><strong id="claimed">0</strong><span>Claimed</span></div>
+    <div><strong id="points">0</strong><span>Your Points</span></div>
+  </div>
+
+  <div class="card">
+    <h2>Quick Actions</h2>
+
+    <div class="actions">
+      <a class="btn" href="donate.html">🍱 List Surplus Food</a>
+      <a class="btn secondary" href="listings.html">🔎 Find Donations</a>
+      <a class="btn secondary" href="profile.html">👤 My Profile</a>
+    </div>
+  </div>
+</main>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

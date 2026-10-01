@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile | FoodBridge</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="index.html">🍃 FoodBridge</a>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="listings.html">Find Food</a>
+    <button class="link-btn" onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<main class="section">
+  <div class="card profile-card">
+    <span class="avatar">👤</span>
+    <h1 id="name">User</h1>
+    <p id="email"></p>
+    <span id="role" class="pill"></span>
+
+    <div class="stats">
+      <div><strong id="points">0</strong><span>Points</span></div>
+      <div><strong id="donations">0</strong><span>Donations</span></div>
+      <div><strong id="claimed">0</strong><span>Claimed</span></div>
+    </div>
+  </div>
+</main>
+
+<script>
+const user = JSON.parse(localStorage.getItem("foodbridgeUser"));
+
+if (!user) {
+  location.href = "login.html";
+} else {
+  document.getElementById("name").textContent = user.name;
+  document.getElementById("email").textContent = user.email;
+  document.getElementById("role").textContent = user.role;
+  document.getElementById("points").textContent = user.points || 0;
+
+  fetch("/api/users/" + user.id + "/activity")
+    .then(r => r.json())
+    .then(data => {
+      document.getElementById("donations").textContent =
+        data.donations.length;
+
+      document.getElementById("claimed").textContent =
+        data.claimed.length;
+    });
+}
+
+function logout() {
+  localStorage.removeItem("foodbridgeUser");
+  location.href = "index.html";
+}
+</script>
+</body>
+</html>

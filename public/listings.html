@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Food | FoodBridge</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="index.html">🍃 FoodBridge</a>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="profile.html">Profile</a>
+  </div>
+</nav>
+
+<main class="section">
+  <div class="page-head">
+    <div>
+      <span class="pill">Food Rescue</span>
+      <h1>Available Donations</h1>
+      <p>Find surplus food ready to be rescued.</p>
+    </div>
+  </div>
+
+  <div class="filters">
+    <input id="search" placeholder="Search food or location...">
+
+    <select id="filter">
+      <option value="All">All Categories</option>
+      <option>Cooked Food</option>
+      <option>Bakery</option>
+      <option>Fruits & Vegetables</option>
+      <option>Packaged Food</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div id="listings" class="grid three"></div>
+</main>
+
+<script src="js/listings.js"></script>
+</body>
+</html>
